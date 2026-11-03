@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "platform-repository-template"
+version = "0.1.0"
+description = "Standardized multi-cloud platform engineering and SRE repository template"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "yamllint>=1.35.1",
+    "flake8>=7.0.0",
+    "pre-commit>=3.7.0",
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
